@@ -6,7 +6,205 @@
   color: #282b30;
 }
 
+a {
+  text-decoration: none;
+  color: #282b30;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
 body {
+  padding: 0 15px;
   font-family: "Roboto", sans-serif;
   color: #282b30;
+}
+
+header {
+  padding: 24px 0;
+}
+
+header h1 {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+header h1 a {
+  font-size: 24px;
+}
+
+.msg-form {
+  padding: 8px 12px;
+  margin-bottom: 24px;
+  width: 100%;
+  background-color: #dfe3ee;
+}
+
+.msg-input {
+  width: 100%;
+  font-size: 16px;
+  background-color: transparent;
+  overflow-y: hidden;
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+.theme-options {
+  margin-bottom: 32px;
+}
+
+.theme-options h2 {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 16px;
+}
+
+.theme-options i {
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+
+.theme-options i img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.theme-font {
+  margin-bottom: 24px;
+}
+
+.font-list,
+.color-list {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.font-option,
+.color-option {
+  margin-right: 8px;
+}
+
+:is(.font-option, .color-option):last-child {
+  margin-right: 0;
+}
+
+.font-option button {
+  padding: 4px 12px;
+  font-size: 14px;
+  background-color: #ededed;
+  border-radius: 100px;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+}
+
+.font-option:is(.is-selected, :hover, :active) button {
+  color: #fff;
+  background-color: #428bca;
+}
+
+.color-option {
+  position: relative;
+  border-radius: 100%;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  transition: box-shadow 200ms ease-in-out;
+}
+
+.color-option:is(.is-selected, :hover, :active) {
+  box-shadow: 0 0 0 2px #428bca;
+}
+
+.color-option button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.color-option button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 32px;
+}
+
+.color-option .color-blue {
+  background-color: #3b5998;
+}
+
+.color-option .color-blue::after {
+  background-color: #dfe3ee;
+}
+
+.color-option .color-green {
+  background-color: #004c4c;
+}
+
+.color-option .color-green::after {
+  background-color: #b2d8d8;
+}
+
+.color-option .color-pink {
+  background-color: #ff0081;
+}
+
+.color-option .color-pink::after {
+  background-color: #ffcae5;
+}
+
+.color-option .color-brown {
+  background-color: #8d5524;
+}
+
+.color-option .color-brown::after {
+  background-color: #ffdbac;
+}
+
+.product-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  margin: 0 auto;
+  color: #fff;
+  background-color: #a5a5a5;
+  transition: background-color 200ms ease-in-out;
+}
+
+.product-button:is(:hover, :active) {
+  background-color: #428bca;
+}
+
+.product-button i {
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+
+.product-button i img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
