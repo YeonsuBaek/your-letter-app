@@ -209,3 +209,43 @@ header h1 a {
   height: 100%;
   object-fit: cover;
 }
+
+.export-modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.export-modal.hidden {
+  display: none;
+}
+
+.export-guide {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #fff;
+  z-index: 100;
+  white-space: nowrap;
+}
+
+.capture-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
