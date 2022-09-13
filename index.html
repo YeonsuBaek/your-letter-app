@@ -19,7 +19,12 @@
     </header>
 
     <div class="msg-form">
-      <textarea class="msg-input" placeholder="write a letter"></textarea>
+      <textarea
+        class="msg-input"
+        placeholder="write a letter"
+        onkeyup="resizeMsgForm()"
+        onkeydown="resizeMsgForm()"
+      ></textarea>
     </div>
 
     <div class="theme-options">
@@ -83,5 +88,7 @@
       <i><img src="./assets/icon-mail.png" alt="" /></i>
       Save as an image
     </button>
+
+    <script src="./resize.js"></script>
   </body>
 </html>
