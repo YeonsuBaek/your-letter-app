@@ -19,12 +19,13 @@
     </header>
 
     <div class="msg-form">
-      <textarea
+      <pre
         class="msg-input"
-        placeholder="write a letter"
+        contenteditable="true"
         onkeyup="resizeMsgForm()"
         onkeydown="resizeMsgForm()"
-      ></textarea>
+      ></pre>
+      <div class="msg-placeholder">write a letter</div>
     </div>
 
     <div class="theme-options">
@@ -95,6 +96,6 @@
       <div class="overlay"></div>
     </aside>
 
-    <script src="./resize.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
