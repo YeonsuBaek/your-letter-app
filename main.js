@@ -21,7 +21,6 @@ const resizeMsgForm = (e) => {
 };
 
 const captureExport = () => {
-  console.log(messageInput.offsetHeight);
   html2canvas(document.querySelector(".msg-form"), {
     logging: true,
     letterRendering: 1,
