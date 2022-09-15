@@ -164,6 +164,18 @@ header h1 a {
   background-color: #428bca;
 }
 
+.font-option .font-01 {
+  font-family: "KyoboHand";
+}
+
+.font-option .font-02 {
+  font-family: "EarlyFontDiary";
+}
+
+.font-option .font-03 {
+  font-family: "KOTRAHOPE";
+}
+
 .color-option {
   position: relative;
   border-radius: 100%;
