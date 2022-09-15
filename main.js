@@ -79,6 +79,25 @@ function changeColor() {
   currentColor.classList.remove("is-selected");
   this.classList.add("is-selected");
   currentColor = this;
+
+  let colorName = currentColor.firstElementChild.className;
+
+  if (colorName == "color-blue") {
+    messageForm.style.backgroundColor = "#dfe3ee";
+    messageInput.style.color = "#3b5998";
+  }
+  if (colorName == "color-green") {
+    messageForm.style.backgroundColor = "#b2d8d8";
+    messageInput.style.color = "#004c4c";
+  }
+  if (colorName == "color-pink") {
+    messageForm.style.backgroundColor = "#ffcae5";
+    messageInput.style.color = "#ff0081";
+  }
+  if (colorName == "color-brown") {
+    messageForm.style.backgroundColor = "#ffdbac";
+    messageInput.style.color = "#8d5524";
+  }
 }
 
 fontOptionButtonList.forEach(function (button) {
