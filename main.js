@@ -62,15 +62,15 @@ function changeFont() {
   this.classList.add("is-selected");
   currentFont = this;
 
-  let fontName = currentFont.firstElementChild.innerHTML;
+  let fontName = currentFont.firstElementChild.className;
 
-  if (fontName == "교보손글씨") {
+  if (fontName == "font-01") {
     messageInput.style.fontFamily = "KyoboHand";
   }
-  if (fontName == "다이어리체") {
+  if (fontName == "font-02") {
     messageInput.style.fontFamily = "EarlyFontDiary";
   }
-  if (fontName == "코트라희망체") {
+  if (fontName == "font-03") {
     messageInput.style.fontFamily = "KOTRAHOPE";
   }
 }
