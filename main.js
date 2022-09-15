@@ -34,6 +34,10 @@ const captureExport = () => {
     height: messageInput.offsetHeight + 16,
   }).then((canvas) => {
     captureImage.appendChild(canvas).classList.add("canvas");
+    let el = document.createElement("a");
+    el.href = canvas.toDataURL("image/jpeg");
+    el.download = "letter.jpg";
+    el.click();
   });
 
   exportModal.classList.remove("hidden");
