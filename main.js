@@ -5,6 +5,10 @@ const exportButton = document.querySelector(".export-button");
 const captureImage = document.querySelector(".capture-image");
 const exportModal = document.querySelector(".export-modal");
 const overlay = document.querySelector(".overlay");
+const fontOptionButtonList = document.querySelectorAll(".font-option");
+const colorOptionButtonList = document.querySelectorAll(".color-option");
+let currentFont = document.querySelector(".font-option.is-selected");
+let currentColor = document.querySelector(".color-option.is-selected");
 
 const resizeMsgForm = (e) => {
   if (messageInput) {
@@ -47,4 +51,24 @@ window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     closeExportModal();
   }
+});
+
+function changeFont() {
+  currentFont.classList.remove("is-selected");
+  this.classList.add("is-selected");
+  currentFont = this;
+}
+
+function changeColor() {
+  currentColor.classList.remove("is-selected");
+  this.classList.add("is-selected");
+  currentColor = this;
+}
+
+fontOptionButtonList.forEach(function (button) {
+  button.addEventListener("click", changeFont);
+});
+
+colorOptionButtonList.forEach(function (button) {
+  button.addEventListener("click", changeColor);
 });
