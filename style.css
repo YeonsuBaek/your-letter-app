@@ -306,3 +306,44 @@ header h1 a {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
 }
+
+.in-app-modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  padding: 32px 16px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.in-app-modal.is-show {
+  display: flex;
+}
+
+.in-app-modal-title {
+  margin-bottom: 16px;
+  color: #444;
+}
+
+.in-app-modal p,
+.in-app-modal strong {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.in-app-modal-button {
+  margin: 20px auto 0;
+  padding: 8px 16px;
+  color: #fff;
+  background-color: #fc7164;
+  border-radius: 4px;
+}
+
+.in-app-modal-button:is(:hover, :active) {
+  background-color: #eb5b4e;
+}
