@@ -10,6 +10,14 @@ const colorOptionButtonList = document.querySelectorAll(".color-option");
 let currentFont = document.querySelector(".font-option.is-selected");
 let currentColor = document.querySelector(".color-option.is-selected");
 
+const startWritting = () => {
+  if (messageInput.innerHTML == "") {
+    messagePlaceholder.classList.remove("hidden");
+  } else {
+    messagePlaceholder.classList.add("hidden");
+  }
+};
+
 const resizeMsgForm = (e, onkey) => {
   if (messageInput) {
     messageInput.style.height = "auto";
@@ -17,13 +25,8 @@ const resizeMsgForm = (e, onkey) => {
     messageInput.style.height = `${height}px`;
   }
 
-  if (messageInput.length != 0) {
-    messagePlaceholder.classList.add("hidden");
-  } else {
-    messagePlaceholder.classList.remove("hidden");
-  }
-
   if (onkey == "up") {
+    startWritting();
     if (e.keyCode == 13) {
       messageInput.lastChild.style.color = window
         .getComputedStyle(messageInput)
