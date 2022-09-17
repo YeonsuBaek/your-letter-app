@@ -6,7 +6,7 @@ window.onload = function () {
   ) {
     document.body.innerHTML = "";
     if (navigator.userAgent.match(/iPhone|iPad/i)) {
-      location.href = "ftp://도메인/bridge.html?_targeturl=" + location.href;
+      inAppModal.classList.add("is-show");
     } else {
       location.href =
         "intent://" +

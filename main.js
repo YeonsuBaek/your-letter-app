@@ -9,6 +9,8 @@ const fontOptionButtonList = document.querySelectorAll(".font-option");
 const colorOptionButtonList = document.querySelectorAll(".color-option");
 let currentFont = document.querySelector(".font-option.is-selected");
 let currentColor = document.querySelector(".color-option.is-selected");
+const inAppModal = document.querySelector(".in-app-modal");
+const inAppModalButton = document.querySelector(".in-app-modal-button");
 
 const startWritting = () => {
   if (messageInput.innerHTML == "") {
@@ -134,3 +136,14 @@ fontOptionButtonList.forEach(function (button) {
 colorOptionButtonList.forEach(function (button) {
   button.addEventListener("click", changeColor);
 });
+
+const copyLink = () => {
+  const t = document.createElement("textarea");
+  document.body.appendChild(t);
+  t.value = "https://yeonsubaek.github.io/your-letter-app/";
+  t.select();
+  document.execCommand("copy");
+  document.body.removeChild(t);
+};
+
+inAppModalButton.addEventListener("click", copyLink);
