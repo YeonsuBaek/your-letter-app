@@ -1,3 +1,5 @@
+const inAppModal = document.querySelector(".in-app-modal");
+
 window.onload = function () {
   if (
     navigator.userAgent.match(

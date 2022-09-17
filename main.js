@@ -9,7 +9,6 @@ const fontOptionButtonList = document.querySelectorAll(".font-option");
 const colorOptionButtonList = document.querySelectorAll(".color-option");
 let currentFont = document.querySelector(".font-option.is-selected");
 let currentColor = document.querySelector(".color-option.is-selected");
-const inAppModal = document.querySelector(".in-app-modal");
 const inAppModalButton = document.querySelector(".in-app-modal-button");
 
 const startWritting = () => {
