@@ -23,8 +23,8 @@
       <pre
         class="msg-input"
         contenteditable="true"
-        onkeyup="resizeMsgForm()"
-        onkeydown="resizeMsgForm()"
+        onkeyup="resizeMsgForm(event, 'up')"
+        onkeydown="resizeMsgForm(event, 'down')"
       ></pre>
       <div class="msg-placeholder">write a letter</div>
     </div>

@@ -10,17 +10,29 @@ const colorOptionButtonList = document.querySelectorAll(".color-option");
 let currentFont = document.querySelector(".font-option.is-selected");
 let currentColor = document.querySelector(".color-option.is-selected");
 
-const resizeMsgForm = (e) => {
+const resizeMsgForm = (e, onkey) => {
   if (messageInput) {
     messageInput.style.height = "auto";
     let height = messageInput.scrollHeight;
     messageInput.style.height = `${height}px`;
   }
 
-  if (messageInput.childNodes.length != 0) {
+  if (messageInput.length != 0) {
     messagePlaceholder.classList.add("hidden");
   } else {
     messagePlaceholder.classList.remove("hidden");
+  }
+
+  if (onkey == "up") {
+    if (e.keyCode == 13) {
+      messageInput.lastChild.style.color = window
+        .getComputedStyle(messageInput)
+        .getPropertyValue("color");
+
+      messageInput.lastChild.style.fontFamily = window
+        .getComputedStyle(messageInput)
+        .getPropertyValue("font-family");
+    }
   }
 };
 
@@ -73,6 +85,12 @@ function changeFont() {
   if (fontName == "font-03") {
     messageInput.style.fontFamily = "KOTRAHOPE";
   }
+
+  for (const child of messageInput.children) {
+    child.style.fontFamily = window
+      .getComputedStyle(messageInput)
+      .getPropertyValue("font-family");
+  }
 }
 
 function changeColor() {
@@ -97,6 +115,12 @@ function changeColor() {
   if (colorName == "color-brown") {
     messageForm.style.backgroundColor = "#ffdbac";
     messageInput.style.color = "#8d5524";
+  }
+
+  for (const child of messageInput.children) {
+    child.style.color = window
+      .getComputedStyle(messageInput)
+      .getPropertyValue("color");
   }
 }
 
